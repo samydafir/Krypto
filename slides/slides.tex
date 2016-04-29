@@ -346,20 +346,20 @@
 \frametitle{Statistik}
 
 Neue Malware \\
-\includegraphics[height=7cm]{bilder/growth.png}
+\includegraphics[height=6cm]{bilder/growth.png}
 \end{frame}
 
 \begin{frame}
 \frametitle{Statistik}
 Gesamte Malware \\
-\includegraphics[height=7cm]{bilder/total.png}
+\includegraphics[height=6cm]{bilder/total.png}
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Statistik}
 Ransomware \\
-\includegraphics[height=7cm]{bilder/ransom.png}
+\includegraphics[height=6cm]{bilder/ransom.png}
 
 \end{frame}
 
@@ -378,22 +378,24 @@ Hauptkriterien:
 \begin{block}{}
 	Infektionswahrscheinlichkeit != 1 - Erkennungsrate
 \end{block}
-Infektionswahrschinlichkeit bei $n$ voneinander unabhängige Angriffe: \\
+Infektionswahrschinlichkeit bei $n$ voneinander unabhängigen Angriffen: \\
 \centering
 $p_{Befall} = (r_x)^n$
 \end{frame}
 
 \begin{frame}
 \frametitle{Performance-Effectivity-Tradeoff}
-Hohe Effektivität -> hoher Leistungsverbrauch -> niedrige Performance \\
+Hohe Effektivität -> hoher Leistungsverbrauch -> niedrige Performance\\
 Hohe Performance -> niedriger Leistungsverbrauch -> niedrige Effektivität
 
-Kompromiss zwischen Performance und Effektivität
+\begin{block}{}
+	Kompromiss zwischen Performance und Effektivität
+\end{block}
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Malware Scanning}
+\frametitle{Static Scanning}
 \begin{block}{Static Scanning}
 	\begin{enumerate}
 		\item Codeausschnitt aus Datei
@@ -404,7 +406,7 @@ Kompromiss zwischen Performance und Effektivität
 \end{frame}
 
 \begin{frame}
-	\frametitle{Malware Scanning}
+	\frametitle{Static Scanning}
 	\begin{block}{Vorteile}
 		\begin{itemize}
 			\item Erkennt Malware mit festgelegter Signatur garantiert
@@ -422,7 +424,7 @@ Kompromiss zwischen Performance und Effektivität
 \end{frame}
 
 \begin{frame}
-\frametitle{Malware Scanning}
+\frametitle{Dynamic Scanning}
 \begin{block}{Dynamic Scanning}
 	\begin{enumerate}
 		\item Verhalten in Verhaltenskatalog gespeichert
@@ -435,7 +437,7 @@ Kompromiss zwischen Performance und Effektivität
 \end{frame}
 
 \begin{frame}
-	\frametitle{Malware Scanning}
+	\frametitle{Dynamic Scanning}
 	\begin{block}{Vorteile}
 		\begin{itemize}
 			\item Unbekannte Malware kann erkannt werden
@@ -453,12 +455,13 @@ Kompromiss zwischen Performance und Effektivität
 
 
 \begin{frame}
-\frametitle{Malware Scanning}
+\frametitle{Heuristic/Proaktive Scanning}
 \begin{block}{Heuristic/Proaktive Scanning}
 	\begin{itemize}
 		\item Bestimmt Wahrscheinlichkeit schädlichen Verhaltens
 		\item Führt Datei nicht aus
-		\item blockiert Programm aufgrund berechneter Wahrscheinlichkeit
+		\item Blockiert Programm aufgrund berechneter Wahrscheinlichkeit
+		\item Meist über Sandbox realisiert
 	\end{itemize}
 \end{block} 
 \end{frame}
@@ -471,11 +474,12 @@ Kompromiss zwischen Performance und Effektivität
 		\item Verhalten in der Datenbank existiert
 		\item Heuristische Untersuchung eine hohe Wahrscheinlichkeit für schädliches Verhalten ermitteln
 	\end{itemize}
+	\pause
 	Design neuer Malware:
 	\begin{itemize}
-		\item Neue Signatur oder komplett neues Verhalten kann von keinem Scanner erkannt werden.
-		\item Gefahr besteht, bis Änderungen in Anti-Malware integriert.
-		\item Integration von Signaturen schnell, von Verhaltensregeln langsam.
+		\item Neue Signatur oder komplett neues Verhalten kann von keinem Scanner erkannt werden
+		\item Gefahr besteht, bis Änderungen in Anti-Malware integriert
+		\item Integration von Signaturen schnell, von Verhaltensregeln langsam
 		\item Bis zur Aktualisierung: kein Schutz
 	\end{itemize}
 \end{frame}
@@ -488,13 +492,16 @@ Kompromiss zwischen Performance und Effektivität
 	\begin{itemize}
 		\item alle Scanning-Techniken Kombinieren
 		\item dadurch eine sehr hohe Erkennungsrate haben
-		\item einen Kompromiss zwischen Performance und Effizienz finden
-		\item Regelmäßig mit Updates versorgt werden.
+		\item einen Kompromiss zwischen Performance und Effektivität finden
+		\item Regelmäßig mit Updates versorgt werden
 	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Schlussfolgerung}
 	\begin{block}{}
 		Trotz der Erfüllung dieser Voraussetzungen sitzen Malware Entwickler immer am längeren Ast. Wird eine komplett neuartige Malware entwickelt, muss diese erst identifiziert, sowie Regeln und Signaturen dafür erstellt werden. Bis zu dem Zeitpunkt, zu dem das Update an User ausgeliefert wird, sind deren Geräte der neuen Malware schutzlos ausgeliefert
 	\end{block}
 \end{frame}
-
 
 \end{document}
