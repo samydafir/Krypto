@@ -1,0 +1,30 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{amssymb,amsthm,amsmath,amscd}
+\usepackage{latexsym}
+\usepackage{enumerate}
+\usepackage[german]{babel}
+\usepackage{verbatim}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+% ---------------
+
+
+% Titelblatt
+% ---------
+
+
+\ \\
+\textbf{Kasiski - Test:}
+Ist ein Hilfsmittel zur Entzifferung von Chiffren, die mit dem Vigenère-Chiffre erzeugt wurden.
+Zuerst durchsucht man den Geheimtext nach Buchstabenfolgen der Länge 3 oder länger, die mehrmals vorkommen. Anschließend bestimmt man den Abstand zwischen je 2 gleichen Folgen, das heißt, man zählt die Buchstaben vom ersten Buchstaben der ersten Folge bis zum ersten Buchstaben der zweiten Folge. So verfährt man mit allen gefundenen Folgen und schreibt die Abstände auf. Man erhält eine Liste von natürlichen Zahlen. Diese Zahlen werden nun in Primfaktoren zerlegt, wodurch sich gleiche Teiler leichter finden lassen. Diese Ermittelte Zahl liefert einen Aufschluss auf die Schlüssellänge. Allerdings wird die genaue Schlüssellänge nicht bekannt, denn der Kasiski-Test liefert nur Vielfache der Schlüssellänge. Zur genauen Betrachtung kann dann aber der Friedman-Test herangezogen werden, der zusätzlich einen Hinweis darauf gibt, ob es sich um eine mono- oder polyalphabetische Verschlüsselung handelt.
+\\
+\\
+Tritt im Ciphertext eine Buchstabenfolge zweimal auf, und wurde mit ihr dasselbe Wort verschlüsselt, so ist der Abstand zwischen den beiden Folgen ein Vielfaches der Schlüsselwortlänge. Beim Kasiski-Test wird nach gleichen Buchstabenfolgen im Ciphertext gesucht. Man setzt nun voraus, dass sie dasselbe Wort verschlüsseln. Stimmt das, so ist der Abstand ein Vielfaches der Schlüsselwortlänge. Wurde aber nicht dasselbe Wort verschlüsselt, ist der Abstand kein Vielfaches der Schlüsselwortlänge, und die beiden Stellen im Geheimtext sind nur zufällig gleich. Natürlich erkennt man nicht sofort, ob „zufällig“ dieselbe Zeichenfolge entstanden ist, oder ob wirklich dasselbe Wort verschlüsselt wurde. Deshalb werden am Ende auch gemeinsame Faktoren gesucht, um die „unpassenden“ Abstände zu finden. Selbstverständlich passiert es vor allem bei kurzen Folgen, dass sie zweimal vorkommen, obwohl nicht dasselbe Wort verschlüsselt wurde. Das ist auch der Grund, warum man in der Regel nicht nach gleichen Folgen der Länge 2 sucht. Die Wahrscheinlichkeit, dass die Buchstabenfolgen im Klartext nicht übereinstimmen, ist einfach zu groß.
+\\
+\textbf{Quellen:}
+\url{https://de.wikipedia.org/wiki/Kasiski-Test}
+% -------------
+\end{document}
