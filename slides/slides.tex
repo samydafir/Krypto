@@ -20,6 +20,7 @@
 		\item Viren und Würmer
 		\item Trojaner
 		\item Malware Protection
+		\item Anwendungsbeispiel
 	\end{enumerate}
 \end{frame}
 
@@ -526,8 +527,22 @@ Hohe Performance $\rightarrow$ niedriger Leistungsverbrauch $\rightarrow$ niedri
 \begin{frame}
 	\frametitle{Schlussfolgerung}
 	\begin{block}{}
-		Trotz der Erfüllung dieser Voraussetzungen sitzen Malware Entwickler immer am längeren Ast. Wird eine komplett neuartige Malware entwickelt, muss diese erst identifiziert, sowie Regeln und Signaturen dafür erstellt werden. Bis zu dem Zeitpunkt, zu dem das Update an User ausgeliefert wird, sind deren Geräte der neuen Malware schutzlos ausgeliefert
+		Trotz der Erfüllung dieser Voraussetzungen sitzen Malware Entwickler immer am längeren Ast. Wird eine komplett neuartige Malware entwickelt, muss diese erst identifiziert, sowie Regeln und Signaturen dafür erstellt werden. Bis zu dem Zeitpunkt, zu dem das Update an User ausgeliefert wird, sind deren Geräte der neuen Malware schutzlos ausgeliefert.
 	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Anwendungsbeispiel}
+	Implementierung eines Ransom-Trojaners
+	\begin{itemize}
+		\item Implementierung in Java mit JavaFx Oberfläche
+		\item Täuscht vor, einen Ordner zu optimieren/zu cleanen
+		\item Verschlüsselt Daten im gewählten Ordner
+		\item Verschlüsselung mit Vigenère-Cipher
+		\item Entschlüsselung mit falschem Schlüssel führt zu erneuter Verschlüsselung
+		\item Entschlüsselungs-Key gegen Bezahlung erhältlich
+	\end{itemize}
+	
 \end{frame}
 
 \begin{frame}
