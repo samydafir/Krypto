@@ -1,4 +1,4 @@
-\documentclass{beamer}
+ \documentclass{beamer}
 \usetheme{Berlin}
 \usecolortheme{beaver}
 \usepackage[ngerman]{babel}
@@ -20,6 +20,7 @@
 		\item Viren und Würmer
 		\item Trojaner
 		\item Malware Protection
+		\item Anwendungsbeispiel
 	\end{enumerate}
 \end{frame}
 
@@ -33,10 +34,10 @@
 				\item 1950 Idee in Spiel umgesetzt
 				\item 1982 wurde erster Bootsektorvirus programmiert
 				\item 1985-1990 wurden  MS-DOS, Apple Macintosh, Amiga, Atari und Unix opfer von ersten Virenangriffen
-				$\Rightarrow$ Ersten Antivirenprogramme entwickelt
+				$\Rightarrow$ Entwicklung erster Antivirenprogramme
 				\item 1990-1995 DOS-Viren
 				\item 1995-2002 32-Bit-Windows Viren
-				\item ab 2002 Anfang der Würmer
+				\item ab 2002 Computerwürmer
 			\end{itemize}
 		\end{block}
 \end{frame}
@@ -45,7 +46,7 @@
 	\frametitle{Viren}
 		\begin{block}{Was sind Viren:}
 			\begin{itemize}
-				\item Verbreiten sich, indem es sich in noch nicht infizierte Dateien kopiert und diese dann ausgeführt werden.
+				\item Verbreiten sich, indem sie sich in noch nicht infizierte Dateien kopieren, die dann ausgeführt werden
 				\item Diese Kopien haben folgenden Ziele:
 				\begin{enumerate}
 					\item Ausführen von Schadcode
@@ -60,9 +61,9 @@
 		\begin{block}{Datei-Viren:}
 			\begin{itemize}
 				\item Am häufigsten anzutreffende Virentyp
-				\item Virus muss sich in diese Wirtsdatei einfügen (oft am Ende)
-				\item Wirtsdatei wird so modifiziert, dass das Virus beim Programmstart aufgerufen wird
-				\item Eindringen auf unterschiedliche Art und Weise in ausführbaren Dateien
+				\item Virus muss sich in die Wirt-Datei einfügen (oft am Ende)
+				\item Wirt-Datei wird so modifiziert, dass das Virus beim Programmstart aufgerufen wird
+				\item Dringen unterschiedliche Art und Weise in ausführbaren Dateien ein
 			\end{itemize}
 		\end{block}
 \end{frame}
@@ -74,7 +75,7 @@
 				\item Sind die ältesten Viren
 				\item Bootsektoren von Disketten bzw. Festplatten werden infiziert
 				\item Bootsektor wird bei jeden Start des Betriebssystems ausgeführt
-				\item Heutzutage aber so gut wie Ausgestorben
+				\item Heutzutage aber so gut wie ausgestorben
 			\end{itemize}
 		\end{block}
 \end{frame}
@@ -83,10 +84,11 @@
 	\frametitle{Viren}
 		\begin{block}{Marko-Viren:}
 			\begin{itemize}
-				\item Sind nicht eigenständige Programme, sondern in Form von Makros
+				\item Sind keine eigenständigen Programme
+				\item treten in Form von Makros auf
 				\item Makros sind Programme, die in Dokumenten eingebettet sind
 				\item Darunter fallen: Microsoft Word, Microsoft Excel, Microsoft PowerPoint ...
-				\item Meistens Ziel, die Standardvorlage zu infizieren da diese bei jedem Programmstart automatisch geladen wird und der Virus so automatisch mit aktiv wird
+				\item Ziel: Standardvorlage infizieren da diese bei jedem Programmstart automatisch geladen wird $\rightarrow$ Virus automatisch mit aktiviert
 			\end{itemize}
 		\end{block}
 \end{frame}
@@ -121,8 +123,8 @@
 	\frametitle{Würmer}
 		\begin{block}{Was sind Würmer?}
 			\begin{itemize}
-				\item Im Gegensatz zu Viren dringen Würmer aktiv auf neue Systeme ein
-				\item Nutzen Sicherheitslücken des Betriebssystems aus wie Netzwerkdienste oder Anwendungen die Netzwerkdienste beanspruchen
+				\item Im Gegensatz zu Viren dringen Würmer aktiv in neue Systeme ein
+				\item Nutzen Sicherheitslücken des Betriebssystems wie Netzwerkdienste oder Anwendungen die Netzwerkdienste beanspruchen aus
 				\item Ein Wurm kann sich wie ein Virus in andere Programmdateien einnisten
 			\end{itemize}
 		\end{block}
@@ -132,9 +134,9 @@
 	\frametitle{Würmer}
 		\begin{block}{E-Mail-Würmer:}
 			\begin{itemize}
-				\item Benutzen zur Verbreitung E-Mail Dienste
+				\item Benutzen E-Mail Dienste zur Verbreitung
 				\item Versenden E-Mail mit einer Datei oder einem Link als Anhang
-				\item Durchsucht E-Mail Kontaktliste und versendet sich selbständig weiter
+				\item Durchsucht E-Mail Kontaktliste und versendet sich selbständig
 			\end{itemize}
 		\end{block}
 \end{frame}
@@ -144,8 +146,8 @@
 		\begin{block}{IM- und IRC-Würmer:}
 			\begin{itemize}
 				\item Benutzen zur Verbreitung Whatsapp, ICQ, MSN Messenger oder IRC-Clients
-				\item Ähnlich wie bei E-Mail-Würmer versendet dieser einen Link an andere Kontakte mit der Schadhaften Datei
-				\item Durchsucht Kontaktliste und versendet sich selbständig weiter
+				\item Ähnlich wie bei E-Mail-Würmer versenden diese einen Link mit der schadhaften Datei an andere Kontakte
+				\item Durchsuchen Kontaktliste und versenden sich selbständig
 			\end{itemize}
 		\end{block}
 \end{frame}
@@ -157,10 +159,9 @@
 				\item Melissa:\\
 				Versendet Mails an Kontakte und führt zu Überlastung
 				\item Der Sasser-Wurm:\\
-				Verbreitete sich nicht per Mail, sonder nutzte Schwachstelle von Windows-Dienst LSASS. Schaltet Computer in unregelmäßigen abständen aus
+				Verbreitete sich nicht per Mail, sonder nutzte Schwachstelle vom Windows-Dienst LSASS. Schaltet Computer in unregelmäßigen Abständen aus
 				\item ILOVEYOU:\\
 				Verbreitete sich extrem schnell mit einem Anhang namens LOVELETTER. Löscht div. Datein und ersetzt diese mit .vbs Dateien
-				
 			\end{itemize}
 		\end{block}
 \end{frame}
@@ -183,7 +184,7 @@
 	\begin{itemize}
 		\item Name stammt vom Sieg der Griechen im Kampf gegen Troja
 		\item Hölzernes Pferd mit Griechen darin
-		\item Krieg gewonnen, weil sie unbemerkt in Troja waren
+		\item Krieg gewonnen, weil sie unbemerkt in Troja eindringen konnten
 	\end{itemize}
 	\flushright
 	\includegraphics[width= 3.5cm]{bilder/pferd.jpg}
@@ -193,10 +194,10 @@
 	\frametitle{Was sind Trojaner?}
 	\begin{itemize}
 		\item Programme, die gezielt in Computer eingeschleust werden
-		\item als nützliches Programm oder Software getarnt
-		\item kann wirklich nützliche Funktionen enthalten
-		\item Virus schon im Programm oder erst aus Internet heruntergeladen
-		\item keine Weiterverbreitung im Gegensatz zu Viren und Würmern
+		\item als nützliche Programme oder Software getarnt
+		\item können tatsächlich nützliche Funktionen enthalten
+		\item Virus ist schon im Programm oder wird erst aus Internet heruntergeladen
+		\item Im Gegensatz zu Viren und Würmern keine Weiterverbreitung
 	\end{itemize}
 \end{frame}
 
@@ -210,7 +211,7 @@
 			\item mit PC
 			\item mit bestimmten Programm
 		\end{enumerate}
-		\item löschen und beenden funktioniert nicht 
+		\item löschen und beenden nicht möglich
 	\end{itemize}
 \end{frame}
 
@@ -218,7 +219,7 @@
 	\frametitle{Verbreitung von Trojaner}
 	\begin{itemize}
 		\item mittels E-Mail (Anhang)
-		\item P2P Websites und diverse Websites
+		\item P2P und diverse Websites
 		\item Werbe-CDs
 		\item USB
 	\end{itemize}
@@ -227,11 +228,11 @@
 
 \begin{frame}
 	\frametitle{Aktivitäten der Schädlinge}
-	Es werden meist unbemerkt Aktionen durchgeführt, wie zb Daten sammeln, welche im Internet übermittelt werden.
+	Es werden meist unbemerkt Aktionen durchgeführt, z.B. Daten gesammelt, welche via Internet übermittelt werden.
 	\begin{itemize}
 		\item Spionage
 		\item Daten Diebstahl
-		\item bis zu Zerstörung vom System
+		\item bis hin zur Zerstörung des Systems
 	\end{itemize}
 \end{frame}
 
@@ -248,7 +249,7 @@
 		\begin{enumerate}
 			\item Kontrolle wird übergeben
 			\item Hacker kann alle Aktionen ausführen
-			\item Zusammenschluss krimineller Zwecke
+			\item Zusammenschluss für kriminelle Zwecke
 		\end{enumerate}
 		\item Dropper
 		\begin{enumerate}
@@ -256,23 +257,31 @@
 			\item versteckt Schädlingsprogramme 
 		\end{enumerate}
 		\item Linker
-		\begin{enumerate}
-			\item verbindet schädliche Trojaner oder Programme
-			\item nicht sichtbar auf PC
-		\end{enumerate}
+			\begin{enumerate}
+				\item verbindet schädliche Trojaner oder Programme
+				\item nicht sichtbar auf PC
+			\end{enumerate}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Arten von Trojanern}
 	\begin{itemize}
 		\item Exploit
+			\begin{enumerate}
+				\item nutzt Fehlerfunktionen und Sicherheitslücken
+				\item Manipulation von Computeraktivitäten (Administrationsrechte)
+				\item lahm legen von Webservern
+			\end{enumerate}
 		\item Rootkit
+			\begin{enumerate}
+				\item Angreifer installieren verschiedene Schadprogramme
+				\item dauerhafter Zugriff auf Computer
+				\item mit Antiviren-Software schwer auffindbar
+				\item fungieren als Backdoors
+			\end{enumerate}
 		\item Trojan Banker
 		\item Werbe- Trojaner
 	\end{itemize}
-	\flushright
-	\includegraphics[width= 4cm]{bilder/trojaner.jpg}
 \end{frame}
 
 \begin{frame}
@@ -297,7 +306,7 @@
 	\begin{itemize}
 		\item Online Durchsuchung
 		\item staatliche Spähsoftware zur Strafverfolgung
-		\item Kommunikationsnetzwerke werden durchsucht vom Staat
+		\item Kommunikationsnetzwerke werden vom Staat durchsucht
 		\item kann mehr als nur Telekommunikation aufzuzeichnen
 		\item gesamte Daten auf Gerät erlangen oder manipulieren
 	\end{itemize}
@@ -310,25 +319,25 @@
 		\item 2009 - Wohnungen überwacht
 		\item Telefonate belauscht
 		\item Reformiertes BKA Gesetz - Grundlage für Bundestrojaner
-		\item jahrelanger Rechtsstreit - Bestandteile BKA verfassungswidrig 
+		\item jahrelanger Rechtsstreit - Bestandteile verfassungswidrig
 		\item Schutz von Privatsphäre nicht gesichert
-		\item Beweise von Spionage können vor Gericht verwendet werden
-		\item nur Daten aus laufenden Telekommunikationen 
+		\item Beweise aus Spionageaktionen können vor Gericht verwendet werden
+		\item nur Daten aus laufender Telekommunikation
 	\end{enumerate}
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{Bundestrojaner Österreich}
-	\begin{enumerate}
-	\item 2007 Schadsoftware von DigiTask erworben
-	\item diskusion über Zulassung in Österreich
-	\item gegen Terror und Mordvergehen
-	\item Whatsapp und Skype 
-	\item noch keine gesetzes Grundlage 
-	\item Einsatz der Software nicht geplant
-	\end{enumerate}
-	\flushright
+		\begin{enumerate}
+		\item 2007 Schadsoftware von DigiTask erworben
+		\item Diskussion über Zulassung in Österreich
+		\item Anwendung gegen Terror und Mordvergehen
+		\item Whatsapp und Skype 
+		\item noch keine Gesetzesgrundlage 
+		\item Einsatz der Software nicht geplant
+		\end{enumerate}
+		\flushright
 	\includegraphics[width= 3.5cm]{bilder/oesterreich.jpg}
 \end{frame}
 
@@ -354,22 +363,21 @@
 
 \begin{frame}
 \frametitle{Statistik}
-
-Neue Malware \\
-\includegraphics[height=6cm]{bilder/growth.png}
+Gesamte Malware \\
+\includegraphics[height=6cm]{bilder/total.png}
 \end{frame}
 
 \begin{frame}
-\frametitle{Statistik}
-Gesamte Malware \\
-\includegraphics[height=6cm]{bilder/total.png}
+	\frametitle{Statistik}
+	Neue Malware \\
+	\includegraphics[height=6cm]{bilder/growth.png}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Ransomware}
 	\begin{block}{Definition}
 		Wichtige persönliche Daten auf dem Computer der Opfers werden verschlüsselt und sind daher nicht mehr verwendbar.\\
-		Den Entschlüsselungs-Key erhält man erst nach der Überweisung eines Lösegelds (ransom).
+		Den Entschlüsselungs-Key erhält man erst nach der Bezahlung eines Lösegelds (ransom).
 	\end{block}
 \end{frame}
 	
@@ -383,12 +391,14 @@ Ransomware \\
 
 
 \begin{frame}
-Hauptkriterien:
-\begin{itemize}
-	\item Erkennungsrate vs. Infektionswahrscheinlichkeit
-	\item Performance-Effectivity-Tradeoff
-	\item Scanning Techniken
-\end{itemize}
+	\frametitle{Malware Scanner}
+	\begin{block}{Hauptkriterien}
+	\begin{itemize}
+		\item Erkennungsrate vs. Infektionswahrscheinlichkeit
+		\item Performance-Effectivity-Tradeoff
+		\item Scanning Techniken
+	\end{itemize}
+	\end{block}
 \end{frame}
 
 \begin{frame}
@@ -403,8 +413,8 @@ $p_{Befall} = (r_x)^n$
 
 \begin{frame}
 \frametitle{Performance-Effectivity-Tradeoff}
-Hohe Effektivität -> hoher Leistungsverbrauch -> niedrige Performance\\
-Hohe Performance -> niedriger Leistungsverbrauch -> niedrige Effektivität
+Hohe Effektivität $\rightarrow$ hoher Leistungsverbrauch $\rightarrow$ niedrige Performance\\
+Hohe Performance $\rightarrow$ niedriger Leistungsverbrauch $\rightarrow$ niedrige Effektivität
 
 \begin{block}{}
 	Kompromiss zwischen Performance und Effektivität
@@ -511,15 +521,35 @@ Hohe Performance -> niedriger Leistungsverbrauch -> niedrige Effektivität
 		\item alle Scanning-Techniken Kombinieren
 		\item dadurch eine sehr hohe Erkennungsrate haben
 		\item einen Kompromiss zwischen Performance und Effektivität finden
-		\item Regelmäßig mit Updates versorgt werden
+		\item Regelmäßig mit Updates versorgt werden!
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Schlussfolgerung}
 	\begin{block}{}
-		Trotz der Erfüllung dieser Voraussetzungen sitzen Malware Entwickler immer am längeren Ast. Wird eine komplett neuartige Malware entwickelt, muss diese erst identifiziert, sowie Regeln und Signaturen dafür erstellt werden. Bis zu dem Zeitpunkt, zu dem das Update an User ausgeliefert wird, sind deren Geräte der neuen Malware schutzlos ausgeliefert
+		Trotz der Erfüllung dieser Voraussetzungen sitzen Malware Entwickler immer am längeren Ast. Wird eine komplett neuartige Malware entwickelt, muss diese erst identifiziert, sowie Regeln und Signaturen dafür erstellt werden. Bis zum Zeitpunkt, zu dem das Update an User ausgeliefert wird, sind deren Geräte der neuen Malware schutzlos ausgeliefert.
 	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Anwendungsbeispiel}
+	Implementierung eines Ransom-Trojaners
+	\begin{itemize}
+		\item Implementierung in Java mit JavaFx Oberfläche
+		\item Täuscht vor, einen Ordner zu optimieren/zu cleanen
+		\item Verschlüsselt Daten im gewählten Ordner
+		\item Verschlüsselung mit Vigenère-Cipher
+		\item Entschlüsselung mit falschem Schlüssel führt zu erneuter Verschlüsselung
+		\item Entschlüsselungs-Key gegen Bezahlung erhältlich
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+	\LARGE{\textbf{ Vielen Dank für eure \\Aufmerksamkeit}}
+	\end{center}
 \end{frame}
 
 \end{document}
