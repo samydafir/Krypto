@@ -292,7 +292,6 @@
 		\item Taskleiste verbirgt sich
 		\item seltsame Meldungen in Dialogfenster
 		\item Systemfarben ändern sich
-		\item Laufwerke öffnen und schließen sich
 	\end{itemize}
 	OSX und Linux:
 	\begin{itemize}
@@ -391,24 +390,13 @@ Ransomware \\
 
 
 \begin{frame}
-	\frametitle{Malware Scanner}
-	\begin{block}{Hauptkriterien}
-	\begin{itemize}
-		\item Erkennungsrate vs. Infektionswahrscheinlichkeit
-		\item Performance-Effectivity-Tradeoff
-		\item Scanning Techniken
-	\end{itemize}
-	\end{block}
-\end{frame}
-
-\begin{frame}
 \frametitle{Erkennungsrate vs. Infektionswahrscheinlichkeit}
 \begin{block}{}
 	Infektionswahrscheinlichkeit != 1 - Erkennungsrate
 \end{block}
 Infektionswahrschinlichkeit bei $n$ voneinander unabhängigen Angriffen: \\
 \centering
-$p_{Befall} = (r_x)^n$
+$p_{Befall} = 1 - (r_x)^n$
 \end{frame}
 
 \begin{frame}
@@ -540,7 +528,6 @@ Hohe Performance $\rightarrow$ niedriger Leistungsverbrauch $\rightarrow$ niedri
 		\item Täuscht vor, einen Ordner zu optimieren/zu cleanen
 		\item Verschlüsselt Daten im gewählten Ordner
 		\item Verschlüsselung mit Vigenère-Cipher
-		\item Entschlüsselung mit falschem Schlüssel führt zu erneuter Verschlüsselung
 		\item Entschlüsselungs-Key gegen Bezahlung erhältlich
 	\end{itemize}
 	
